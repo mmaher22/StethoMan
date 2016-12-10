@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Stethoman</string>
+    <string name="title_activity_adddoctor">adddoctor</string>
+</resources>
