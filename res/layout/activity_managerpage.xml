@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_managerpage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.youhanamikhaiel.stethoman.Managerpage"
+    android:background="#3a82cf">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/sendmessage"
+                android:id="@+id/imageButton1"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:background="#3a82cf"
+                android:paddingRight="5dp"
+                android:soundEffectsEnabled="true"
+                android:contextClickable="true" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/mynotifications"
+                android:id="@+id/imageButton2"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:background="#3a82cf"
+                android:paddingLeft="5dp"
+                android:soundEffectsEnabled="true"
+                android:contextClickable="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/addpatient"
+                android:id="@+id/imageButton3"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:background="#3a82cf"
+                android:paddingRight="5dp"
+                android:src="@drawable/addpatient"
+                android:soundEffectsEnabled="true"
+                android:contextClickable="true" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/adddoctor"
+                android:id="@+id/imageButton4"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:background="#3a82cf"
+                android:paddingLeft="5dp"
+                android:soundEffectsEnabled="true"
+                android:contextClickable="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/edittimeslots"
+                android:id="@+id/imageButton5"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:background="#3a82cf"
+                android:paddingRight="5dp"
+                android:soundEffectsEnabled="true"
+                android:contextClickable="true" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/editpatient"
+                android:id="@+id/imageButton6"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:background="#3a82cf"
+                android:paddingLeft="5dp"
+                android:soundEffectsEnabled="true"
+                android:contextClickable="true" />
+        </LinearLayout>
+
+        <Button
+            android:text="Check time slots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checktimeslot" />
+    </LinearLayout>
+
+</RelativeLayout>
