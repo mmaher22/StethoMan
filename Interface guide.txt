@@ -1,0 +1,46 @@
+pages with label vvv are finished
+pages with label sss not finished and they are the same 
+pages without label not finished, needs further deveplopment in the application to be able to make them
+
+
+<<<Manager>>>
+vvv- sendmsg: ID, autocomplete(Name), content, send button.
+vvv- adddoctor: Name, mobile, mail, specialization, photo, password, achievements and awards.
+vvv- addpatient: Name, mobile, address, mail, password, blood type, medical notes.
+vvv- addmanager: Name, mobile, address, email, uniqueID, password.
+vvv- deleteuser: ID, autocomplete, delete button
+vvv- editpatient: ID, radio(lab investigation or medication), add button
+vvv----> addtopatient: upload photo, comments, confirm button
+vvv----> addmedication: medication name, time, period, comments, confirm button
+vvv- editdoctorstimeslot: specialization, ID, autocomplete(drname), Add timeslot button, delete timeslot button
+vvv----> edittimeslots: name, date, start time, end time and maximum number of patients.
+vvv----> deletetimeslot: name, specialization, timeslots, delete button
+vvv- Update password: User ID, new password, confirm button
+- checktimeslot: specialization, date ------> doctorslist -----> doctortimeslot: photo, name, timeslot, patientsnames
+- viewnotifications:
+
+
+
+<<<Doctor>>>
+vvv- doctoreditinfo: phone, mobile, address, mail, achievements and awards.
+vvv- searchpatient: ID, radio(lab investigation, medication), show button 
+sss-----> medicalhistory: photos, comments, dates.
+sss-----> medication: medication name, time, description.
+vvv- editpatient: ID, radio(lab investigation or medication), add button
+vvv----> addinvestigation: upload photo, comments, confirm button
+vvv----> addmedication: medication name, time, period, comments, confirm button
+vvv- sendmsg: ID, autocomplete(name), content, send button
+vvv- sendmsgtomanager: content, send button
+- viewnotifications:
+
+<<<Patient>>>
+vvv- patienteditinfo: mobile, address, mail.
+vvv- requestvisit: autocomplete(specialization), date, spinner(Doctorname) 
+vvv-----> doctorprofile: photo, name, specialization, fees, review, timeslot
+vvv- viewmyhistory: radio(lab investigation, medication), show button
+sss-----> medicalhistory: photos, comments, dates.
+sss-----> medication: medication name, time, description.
+vvv- reviewdoctor: autocomplete(specialization), autocomplete(Doctorname), ratingBar, confirm
+vvv- sendmsg: ID, autocomplete(name), content, send button
+vvv- sendmsgtomanager: content, send button
+- viewnotifications:
