@@ -12,40 +12,20 @@ import android.widget.*;
 import android.content.*;
 
 
-public class Login extends AppCompatActivity implements View.OnClickListener {
-
+public class Login extends AppCompatActivity implements AsyncResponse{
     TextView textView3;
-// The three operations leading to the three pages of doctor, manager and patient
-    private void buttonClick1() { startActivity(new Intent("cp3.name.managerpage"));}
-    private void buttonClick2() { startActivity(new Intent("cp3.name.doctorpage"));}
-    private void buttonClick3() { startActivity(new Intent("cp3.name.patientpage"));}
+    BackgroundWorker asyncTask;
+    EditText useridet, passet;
+    RadioButton rmanager, rdoctor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        textView3 = (TextView) findViewById(R.id.textView3);
-        textView3.setOnClickListener(this);
-// The selection of the radio button leads to one of the three pages
-        final RadioGroup rg = (RadioGroup) findViewById(R.id.radioGroup1);
-        Button btn = (Button) findViewById(R.id.buttonone);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int selectedID = rg.getCheckedRadioButtonId();
-                switch (selectedID){
-                    case R.id.radioButton1:
-                        buttonClick1();
-                        break;
-                    case R.id.radioButton2:
-                        buttonClick2();
-                        break;
-                    case R.id.radioButton3:
-                        buttonClick3();
-                        break;
-                }
-            }
-        });
+        rmanager = (RadioButton) findViewById(R.id.radioButton1);
+        rdoctor = (RadioButton) findViewById(R.id.radioButton2);
+        useridet = (EditText)findViewById(R.id.editText);
+        passet = (EditText)findViewById(R.id.editText2);
     }
 
     private void textClick()
@@ -54,13 +34,40 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     }
 
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId())
-        {
-            case R.id.textView3:
-                textClick();
-                break;
-        }
+    public void OnLogin (View view) {
+        String userid = useridet.getText().toString();
+        String pass = passet.getText().toString();
+        String table;
+
+        if(rmanager.isChecked()) table = "manager";
+        else if(rdoctor.isChecked()) table = "doctor";
+        else table = "patient";
+        String type = "login";
+        asyncTask = new BackgroundWorker(this);
+        asyncTask.delegate = this;
+        asyncTask.execute(type, userid, pass, table);
     }
+
+    @Override
+     public void processFinish(String output){
+            if(output.contains("Logged") && rmanager.isChecked())
+            {
+                ((StethoMan) this.getApplication()).setid(Integer.parseInt(useridet.getText().toString()), 'M');
+                Intent i = new Intent(getApplicationContext(), Managerpage.class);
+                startActivity(i);
+            }
+            else if(output.contains("Logged") && rdoctor.isChecked())
+            {
+                ((StethoMan) this.getApplication()).setid(Integer.parseInt(useridet.getText().toString()), 'D');
+                Intent i = new Intent(getApplicationContext(),doctorpage.class);
+                startActivity(i);
+            }
+            else if(output.contains("Logged"))
+            {
+                ((StethoMan) this.getApplication()).setid(Integer.parseInt(useridet.getText().toString()), 'P');
+                Intent i = new Intent(getApplicationContext(),patientpage.class);
+                startActivity(i);
+            }
+        }
+
 }
