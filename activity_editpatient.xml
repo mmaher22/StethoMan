@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_editpatient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.youhanamikhaiel.stethoman.editpatient"
+    android:background="#3a82cf">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:text="Add to patient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView11"
+                android:textSize="24sp"
+                android:textColor="#e7e8e3"
+                android:layout_marginBottom="25dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText10"
+                android:background="#e7e8e3"
+                android:layout_marginBottom="15dp"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:paddingLeft="5dp"
+                android:hint="Patient's ID" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="15dp"
+                android:id="@+id/radioGroup1">
+
+                <RadioButton
+                    android:text="Lab investigation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton5"
+                    android:layout_weight="1"
+                    android:textColor="#e7e8e3"
+                    android:textColorLink="#e7e8e3"
+                    android:buttonTint="#e7e8e3"
+                    android:gravity="center_vertical" />
+
+                <RadioButton
+                    android:text="Medication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton6"
+                    android:layout_weight="1"
+                    android:textColor="#e7e8e3"
+                    android:textColorLink="#e7e8e3"
+                    android:buttonTint="#e7e8e3"
+                    android:gravity="center_vertical" />
+
+                <RadioButton
+                    android:text="Medical record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton7"
+                    android:layout_weight="1"
+                    android:textColor="#e7e8e3"
+                    android:textColorLink="#e7e8e3"
+                    android:buttonTint="#e7e8e3"
+                    android:gravity="center_vertical"/>
+
+            </RadioGroup>
+
+            <Button
+                android:text="Proceed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button8"
+                android:textColor="#e7e8e3"
+                android:backgroundTint="#e14938" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
