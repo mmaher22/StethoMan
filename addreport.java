@@ -23,7 +23,7 @@ public class addreport extends AppCompatActivity implements AsyncResponse{
         spec=(EditText)findViewById(R.id.Specialization);
         cont =(EditText)findViewById(R.id.editText77);
         btnn = (Button) findViewById(R.id.button44);
-        System.out.println("rrrr");
+
     }
 
     public void report(View view) {
@@ -33,7 +33,7 @@ public class addreport extends AppCompatActivity implements AsyncResponse{
         String type = "report";
         e1=((StethoMan) this.getApplication()).getid2();
         String id= Integer.toString(e1);
-System.out.println("kn  "+id);
+
         asyncTask = new BackgroundDoctor(this);
         asyncTask.delegate = this;
         asyncTask.execute(type,id,tit,specialization,content);
@@ -41,4 +41,6 @@ System.out.println("kn  "+id);
 
     public void processFinish(String output) {
     }
+
 }
+
