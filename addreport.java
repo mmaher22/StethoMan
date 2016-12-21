@@ -23,6 +23,7 @@ public class addreport extends AppCompatActivity implements AsyncResponse{
         spec=(EditText)findViewById(R.id.Specialization);
         cont =(EditText)findViewById(R.id.editText77);
         btnn = (Button) findViewById(R.id.button44);
+
     }
 
     public void report(View view) {
@@ -40,4 +41,6 @@ public class addreport extends AppCompatActivity implements AsyncResponse{
 
     public void processFinish(String output) {
     }
+
 }
+
