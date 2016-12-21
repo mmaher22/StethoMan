@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_editdoctorstimeslot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.youhanamikhaiel.stethoman.editdoctorstimeslot"
+    android:background="#3a82cf">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:text="Add doctor time slot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView13"
+                android:textColor="#e7e8e3"
+                android:textSize="24sp"
+                android:layout_marginBottom="5dp" />
+
+            <Button
+                android:text="add time slot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/addtimeslotbtn"
+                android:layout_weight="1"
+                android:textColor="#e7e8e3"
+                android:backgroundTint="#e14938"
+                android:layout_marginTop="2dp"
+                android:onClick="clickadd"/>
+
+            <TextView
+                android:text="Delete doctor time slot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView9"
+                android:textColor="#e7e8e3"
+                android:textSize="24sp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="5dp" />
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Doctorname"
+                android:background="#e7e8e3"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:paddingLeft="5dp"
+                android:hint="Name" />
+
+            <Button
+                android:text="View Doctors' Slots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/viewslots"
+                android:textColor="#e7e8e3"
+                android:backgroundTint="#e14938"
+                android:onClick="clickviewslots"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#e7e8e3"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:paddingLeft="5dp"
+                android:id="@+id/slots" />
+
+            <Button
+                android:text="Delete Slot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/deleteslot"
+                android:textColor="#e7e8e3"
+                android:backgroundTint="#e14938"
+                android:onClick="clickdelslot" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

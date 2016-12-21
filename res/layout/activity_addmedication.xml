@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_addmedication"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.youhanamikhaiel.stethoman.addmedication"
+    android:background="#3a82cf">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:text="Add medication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView12"
+                android:textColor="#e7e8e3"
+                android:textSize="24sp"
+                android:layout_marginBottom="25dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText5"
+                android:layout_marginBottom="7dp"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:paddingLeft="5dp"
+                android:background="#e7e8e3"
+                android:hint="Medication name" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/editText11"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:paddingLeft="5dp"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:background="#e7e8e3"
+                android:inputType="text|datetime|time"
+                android:hint="Number of Times" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/editText12"
+                android:background="#e7e8e3"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="7dp"
+                android:hint="Period" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/editText13"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="7dp"
+                android:paddingTop="7dp"
+                android:paddingLeft="5dp"
+                android:background="#e7e8e3"
+                android:paddingBottom="7dp"
+                android:layout_weight="1"
+                android:layout_height="200dp"
+                android:hint="Comments"
+                android:gravity="top" />
+
+            <Button
+                android:text="Add medication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button10"
+                android:textColor="#e7e8e3"
+                android:backgroundTint="#e14938"
+                android:onClick="addingmedc"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

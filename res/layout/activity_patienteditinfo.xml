@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_patienteditinfo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.youhanamikhaiel.stethoman.patienteditinfo"
+    android:background="#3a82cf">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="Edit info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView22"
+            android:textSize="25sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#e7e8e3" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/patientemail"
+            android:background="#e7e8e3"
+            android:paddingTop="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:paddingBottom="7dp"
+            android:hint="Email"
+            android:paddingLeft="5dp" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/patientpassword"
+            android:background="#e7e8e3"
+            android:paddingTop="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:paddingBottom="7dp"
+            android:hint="Password"
+            android:paddingLeft="5dp" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/patientmobile"
+            android:background="#e7e8e3"
+            android:paddingTop="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:paddingBottom="7dp"
+            android:hint="Mobile number"
+            android:paddingLeft="5dp" />
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/patientaddress"
+            android:background="#e7e8e3"
+            android:paddingTop="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:paddingBottom="7dp"
+            android:hint="The Address"
+            android:paddingLeft="5dp" />
+
+
+
+        <Button
+            android:text="Update info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/updateee"
+
+            android:background="#e14938"
+            android:layout_marginLeft="5dp"
+            android:textColor="#e7e8e3"
+            android:onClick="UpdatePatient" />
+    </LinearLayout>
+
+</RelativeLayout>

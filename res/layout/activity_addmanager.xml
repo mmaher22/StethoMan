@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_adddoctor"
+    android:id="@+id/activity_addmanager"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.youhanamikhaiel.stethoman.adddoctor"
+    tools:context="com.example.youhanamikhaiel.stethoman.addmanager"
     android:background="#3a82cf">
 
     <ScrollView
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Add doctor"
+                android:text="Add manager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView2"
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
-                android:id="@+id/doctorname"
+                android:id="@+id/managername"
                 android:background="#e7e8e3"
                 android:paddingTop="7dp"
                 android:layout_marginTop="7dp"
@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:ems="10"
-                android:id="@+id/doctoremail"
+                android:id="@+id/manageremail"
                 android:background="#e7e8e3"
                 android:paddingTop="7dp"
                 android:layout_marginTop="7dp"
@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="phone"
                 android:ems="10"
-                android:id="@+id/doctormobile"
+                android:id="@+id/managermobile"
                 android:background="#e7e8e3"
                 android:paddingTop="7dp"
                 android:layout_marginTop="7dp"
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:ems="10"
-                android:id="@+id/doctorpassword"
+                android:id="@+id/managerpassword"
                 android:background="#e7e8e3"
                 android:paddingTop="7dp"
                 android:layout_marginTop="7dp"
@@ -85,63 +85,17 @@
                 android:hint="Password"
                 android:paddingLeft="5dp" />
 
-            <AutoCompleteTextView
+            <Button
+                android:text="Add manager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/autoCompleteTextView2"
-                android:background="#e7e8e3"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="7dp"
-                android:paddingTop="7dp"
-                android:paddingBottom="7dp"
-                android:hint="Specialization"
-                android:paddingLeft="5dp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/doctorfees"
-                android:background="#e7e8e3"
-                android:paddingTop="7dp"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="7dp"
-                android:paddingBottom="7dp"
-                android:hint="Fees"
-                android:paddingLeft="5dp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textMultiLine"
-                android:ems="10"
-                android:id="@+id/awards"
-                android:paddingBottom="5dp"
-                android:background="#e7e8e3"
-                android:paddingTop="5dp"
-                android:paddingLeft="5dp"
-                android:layout_marginBottom="10dp"
-                android:hint="Education and Degrees" />
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:text="Add doctor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button7"
-                    android:layout_weight="1"
-                    android:background="#e14938"
-                    android:layout_marginLeft="5dp"
-                    android:textColor="#e7e8e3"
-                    android:onClick="onaddingdoc"/>
-            </LinearLayout>
+                android:id="@+id/button7"
+                android:layout_weight="1"
+                android:background="#e14938"
+                android:layout_marginLeft="5dp"
+                android:textColor="#e7e8e3"
+                android:onClick="onaddingman"/>
 
         </LinearLayout>
     </ScrollView>
-
 </RelativeLayout>

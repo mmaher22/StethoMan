@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_requestvisit"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,7 +15,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:weightSum="1">
 
         <TextView
             android:text="Request a visit"
@@ -43,7 +45,7 @@
             android:calendarViewShown="false"
             android:clickable="false"
             android:calendarTextColor="#e7e8e3"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="20dp"
             android:datePickerMode="spinner"
             android:endYear="2070"
             android:startYear="2016" />
@@ -54,6 +56,49 @@
             android:layout_height="wrap_content"
             android:id="@+id/buttonsearch"
             android:textColor="#e7e8e3"
-            android:background="#e14938" />
+            android:background="#e14938"
+            android:onClick="findatslot"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/slots"
+            android:backgroundTint="#e7e8e3"
+            android:layout_weight="1"
+            android:layout_marginBottom="15dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/requestvisit"
+                android:id="@+id/bookimg"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:background="#3a82cf"
+                android:paddingRight="5dp"
+                android:visibility="invisible"
+                android:onClick="setappointment"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/reviewdoctor"
+                android:id="@+id/viewdocimg"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:background="#3a82cf"
+                android:paddingLeft="5dp"
+                android:visibility="invisible"
+                android:onClick="viewdoctor"/>
+        </LinearLayout>
+
     </LinearLayout>
 </RelativeLayout>

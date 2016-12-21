@@ -12,119 +12,137 @@
     tools:context="com.example.youhanamikhaiel.stethoman.Managerpage"
     android:background="#3a82cf">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="5dp"
-            android:paddingTop="5dp">
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/sendmessage"
-                android:id="@+id/imageButton1"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:background="#3a82cf"
-                android:paddingRight="5dp"
-                android:soundEffectsEnabled="true"
-                android:contextClickable="true" />
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/mynotifications"
-                android:id="@+id/imageButton2"
-                android:layout_weight="1"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="#3a82cf"
-                android:paddingLeft="5dp"
-                android:soundEffectsEnabled="true"
-                android:contextClickable="true" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="5dp"
-            android:paddingTop="5dp">
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/addpatient"
-                android:id="@+id/imageButton3"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:background="#3a82cf"
-                android:paddingRight="5dp"
-                android:src="@drawable/addpatient"
-                android:soundEffectsEnabled="true"
-                android:contextClickable="true" />
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/adddoctor"
-                android:id="@+id/imageButton4"
-                android:layout_weight="1"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="#3a82cf"
-                android:paddingLeft="5dp"
-                android:soundEffectsEnabled="true"
-                android:contextClickable="true" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp">
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/edittimeslots"
-                android:id="@+id/imageButton5"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:background="#3a82cf"
-                android:paddingRight="5dp"
-                android:soundEffectsEnabled="true"
-                android:contextClickable="true" />
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/editpatient"
-                android:id="@+id/imageButton6"
-                android:layout_weight="1"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="#3a82cf"
-                android:paddingLeft="5dp"
-                android:soundEffectsEnabled="true"
-                android:contextClickable="true" />
-        </LinearLayout>
-
-        <Button
-            android:text="Check time slots"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/checktimeslot" />
-    </LinearLayout>
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/sendmessage"
+                    android:id="@+id/imageButton1"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:background="#3a82cf"
+                    android:paddingRight="5dp"
+                    android:soundEffectsEnabled="true"
+                    android:contextClickable="true" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/mynotifications"
+                    android:id="@+id/imageButton2"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="#3a82cf"
+                    android:paddingLeft="5dp"
+                    android:soundEffectsEnabled="true"
+                    android:contextClickable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/addpatient"
+                    android:id="@+id/imageButton3"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:background="#3a82cf"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/addpatient"
+                    android:soundEffectsEnabled="true"
+                    android:contextClickable="true" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/adddoctor"
+                    android:id="@+id/imageButton4"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="#3a82cf"
+                    android:paddingLeft="5dp"
+                    android:soundEffectsEnabled="true"
+                    android:contextClickable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/edittimeslots"
+                    android:id="@+id/imageButton5"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:background="#3a82cf"
+                    android:paddingRight="5dp"
+                    android:soundEffectsEnabled="true"
+                    android:contextClickable="true" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/editpatient"
+                    android:id="@+id/imageButton6"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="#3a82cf"
+                    android:paddingLeft="5dp"
+                    android:soundEffectsEnabled="true"
+                    android:contextClickable="true" />
+            </LinearLayout>
+
+            <Button
+                android:text="delete user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/deleteuserbtn" />
+
+            <Button
+                android:text="add new manager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/addmanagerbtn" />
+
+            <Button
+                android:text="Reset password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/updatepassword" />
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
