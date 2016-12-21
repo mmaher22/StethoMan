@@ -19,7 +19,6 @@ import android.widget.AdapterView.OnItemSelectedListener;
 
 public class adddoctor extends AppCompatActivity  implements AsyncResponse {
 
-    Button buttonupload2;
     private static final int PICK_IMAGE2 = 100;
     EditText nameet, passet, mailet, mobileet, feeset, eduet;
     AutoCompleteTextView specet;
@@ -45,7 +44,6 @@ public class adddoctor extends AppCompatActivity  implements AsyncResponse {
         autocomplete.setThreshold(2);
         autocomplete.setAdapter(adapter);
 
-
         nameet = (EditText)findViewById(R.id.doctorname);
         passet = (EditText)findViewById(R.id.doctorpassword);
         mailet = (EditText)findViewById(R.id.doctoremail);
@@ -54,17 +52,6 @@ public class adddoctor extends AppCompatActivity  implements AsyncResponse {
         specet = (AutoCompleteTextView)findViewById(R.id.autoCompleteTextView2);
         eduet = (EditText)findViewById(R.id.awards);
 
-        buttonupload2 = (Button) findViewById(R.id.button6);
-        buttonupload2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openGallery();
-            }
-        });
-    }
-    private void openGallery(){
-        Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
-        startActivityForResult(gallery, PICK_IMAGE2);
     }
 
     public void onaddingdoc(View view){

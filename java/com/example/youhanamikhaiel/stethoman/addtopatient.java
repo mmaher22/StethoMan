@@ -9,9 +9,10 @@ import android.widget.Button;
 
 
 public class addtopatient extends AppCompatActivity {
-
+    String e11;
     Button buttonupload;
     private static final int PICK_IMAGE = 100;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,15 @@ public class addtopatient extends AppCompatActivity {
                 openGallery();
             }
         });
+
+    }
+
+
+
+
+    public void up(){
+        String type = "lab";
+
     }
     private void openGallery(){
         Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);

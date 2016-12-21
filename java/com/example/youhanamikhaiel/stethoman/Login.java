@@ -11,12 +11,15 @@ import android.transition.*;
 import android.widget.*;
 import android.content.*;
 
+import static com.example.youhanamikhaiel.stethoman.R.id.activity_forgotpassword;
+import static com.example.youhanamikhaiel.stethoman.R.id.textView;
+
 
 public class Login extends AppCompatActivity implements AsyncResponse{
-    TextView textView3;
     BackgroundWorker asyncTask;
     EditText useridet, passet;
     RadioButton rmanager, rdoctor;
+    TextView tView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +29,14 @@ public class Login extends AppCompatActivity implements AsyncResponse{
         rdoctor = (RadioButton) findViewById(R.id.radioButton2);
         useridet = (EditText)findViewById(R.id.editText);
         passet = (EditText)findViewById(R.id.editText2);
-    }
+        tView = (TextView)this.findViewById(R.id.textView3);
 
-    private void textClick()
-    {
-        startActivity(new Intent("cp3.name.forgotpassword"));
+        tView.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(getApplicationContext(), forgotpassword.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

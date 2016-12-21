@@ -21,14 +21,19 @@ public class Managerpage extends AppCompatActivity{
     ImageButton imageButton4;
     ImageButton imageButton5;
     ImageButton imageButton6;
+    Button deleteuserbtn;
+    Button addmanagerbtn;
+    Button updatepassword;
 
-
-    private void imagebutton1Click() {startActivity(new Intent("cp3.name.sendmsgdoctor"));}
+    private void imagebutton1Click() {startActivity(new Intent("cp3.name.sendmsg"));}
     private void imagebutton2Click() {startActivity(new Intent("cp3.name.viewnotifications"));}
     private void imagebutton3Click() {startActivity(new Intent("cp3.name.addpatient"));}
     private void imagebutton4Click() {startActivity(new Intent("cp3.name.adddoctor"));}
-    private void imagebutton5Click() {startActivity(new Intent("cp3.name.edittimeslots"));}
-    private void imagebutton6Click() {startActivity(new Intent("cp3.name.addtopatient"));}
+    private void imagebutton5Click() {startActivity(new Intent("cp3.name.editdoctorstimeslot"));}
+    private void imagebutton6Click() {startActivity(new Intent("cp3.name.editpatient"));}
+    private void button2Click() {startActivity(new Intent("cp3.name.deleteuser"));}
+    private void button3Click() {startActivity(new Intent("cp3.name.addmanager"));}
+    private void button4Click() {startActivity(new Intent("cp3.name.resetpassword"));}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,6 +108,42 @@ public class Managerpage extends AppCompatActivity{
                 {
                     case R.id.imageButton6:
                         imagebutton6Click();
+                        break;
+                }
+            }
+        });
+        deleteuserbtn = (Button) findViewById(R.id.deleteuserbtn);
+        deleteuserbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (view.getId())
+                {
+                    case R.id.deleteuserbtn:
+                        button2Click();
+                        break;
+                }
+            }
+        });
+        addmanagerbtn = (Button) findViewById(R.id.addmanagerbtn);
+        addmanagerbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (view.getId())
+                {
+                    case R.id.addmanagerbtn:
+                        button3Click();
+                        break;
+                }
+            }
+        });
+        updatepassword = (Button) findViewById(R.id.updatepassword);
+        updatepassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (view.getId())
+                {
+                    case R.id.updatepassword:
+                        button4Click();
                         break;
                 }
             }
